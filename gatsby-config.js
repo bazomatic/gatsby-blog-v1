@@ -10,13 +10,13 @@ module.exports = {
     url: "https://abazly.com",
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `src`,
-    //     path: `${__dirname}/src/posts`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
     {
       resolve: `gatsby-mdx`,
       options: {

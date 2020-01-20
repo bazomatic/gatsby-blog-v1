@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Sidebar from "./sidebar"
+import "./layout.css"
 
 export default ({ children }) => (
   <Container>

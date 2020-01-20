@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 
 export default () => (
   <Container>
-    SIDEBAR!
+    <HeadingLink to="/">
+      <Heading>Sam Abazly</Heading>
+    </HeadingLink>
   </Container>
-);
+)
 
 const Container = styled.div`
   background: #202020;
@@ -17,12 +19,12 @@ const Container = styled.div`
   @media (max-width: 768px) {
     padding: 0.25rem 1rem;
   }
-`;
+`
 
 const Heading = styled.h1`
   color: white;
   margin: 0;
-`;
+`
 
 const Lead = styled.p`
   font-size: 1.25rem;
@@ -30,12 +32,12 @@ const Lead = styled.p`
   @media (max-width: 768px) {
     display: none;
   }
-`;
+`
 
 const Icon = styled.a`
   text-decoration: none;
   color: inherit;
-`;
+`
 
 const HeadingLink = styled(Link)`
   color: white;
@@ -43,11 +45,11 @@ const HeadingLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-`;
+`
 
 const CopyLine = styled.p`
   text-align: center;
   @media (max-width: 768px) {
     margin-bottom: 0;
   }
-`;
+`
