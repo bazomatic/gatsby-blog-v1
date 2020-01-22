@@ -11,29 +11,18 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
+        name: `posts`,
         path: `${__dirname}/src/posts`,
       },
     },
-    {
-      resolve: `gatsby-mdx`,
-      options: {
-        extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 768,
-            },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-styled-components`
   ],
 }
