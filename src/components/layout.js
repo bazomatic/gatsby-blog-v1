@@ -11,19 +11,20 @@ export default ({ children }) => (
 )
 
 const Container = styled.div`
-  display: flex;
   width: 100%;
   height: 100vh;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `
 
 const Wrapper = styled.div`
-  flex: 2 100%;
-  overflow-y: scroll;
-  padding: 1rem;
-  @media (max-width: 768px) {
-    overflow-y: inherit;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  max-width: 38rem;
+  @media (min-width: 64em) {
+    margin-left: 22rem;
+    margin-right: 4rem;
+  }
+  @media (min-width: 48em) {
+    margin-left: 18rem;
+    max-width: 38rem;
   }
 `

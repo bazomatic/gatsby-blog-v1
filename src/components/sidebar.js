@@ -13,11 +13,15 @@ export default () => (
 const Container = styled.div`
   background: #202020;
   color: rgba(255, 255, 255, 0.5);
-  text-align: left;
-  flex: 1 25%;
+  text-align: center;
   padding: 2rem 1rem;
-  @media (max-width: 768px) {
-    padding: 0.25rem 1rem;
+  @media (min-width: 48em) {
+    width: 18rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: left;
   }
 `
 

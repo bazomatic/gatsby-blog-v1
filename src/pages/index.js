@@ -4,9 +4,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
-const Container = styled.div`
-  max-width: 1000px;
-`
+const Container = styled.div``
 
 export const postQuery = graphql`
   query postIndex {
