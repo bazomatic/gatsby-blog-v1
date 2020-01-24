@@ -5,11 +5,11 @@ const mdxFile = /mdx*/i
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  if (node.internal.type === "Mdx") {
+  if (node.internal.type === `Mdx`) {
     if (node.frontmatter.title === "") return
     const baseSlug = createFilePath({ node, getNode, basePath: "posts" })
     let nameArray = baseSlug.replace(/\//g, "").split("-")
-    const slug = "/" + (nameArray.size() > nameArray.slice(3))
+    const slug = "/" + nameArray.slice(3)
     createNodeField({
       node,
       name: "slug",
