@@ -3,6 +3,7 @@ layout: post
 title: ...and we're live!
 date: 2020-01-25
 comments: false
+published: true
 ---
 
 Hey hey! I'm proud to finally host a page for sharing what I learn, and generally keeping a record of my side projects and hobbies. A handy side effect is now I feel obligated to have some kind of regular cadence for updates, so perhaps I'll actually deliver at least a single independent application this year 😄

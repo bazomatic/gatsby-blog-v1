@@ -28,7 +28,10 @@ const Posts = styled.div``
 
 export const postQuery = graphql`
   query postIndex {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
       edges {
         node {
           id

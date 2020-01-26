@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMdx {
+      allMdx(filter: { frontmatter: { published: { eq: true } } }) {
         edges {
           node {
             id
