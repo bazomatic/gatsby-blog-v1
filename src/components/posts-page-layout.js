@@ -4,9 +4,19 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import styled from "styled-components"
 
-const Container = styled.div`
-  max-width: 1000px;
-`
+export default ({ data: { mdx } }) => {
+  return (
+    <Layout>
+      <Container>
+        <h1>{mdx.frontmatter.title}</h1>
+        <h4>{mdx.frontmatter.date}</h4>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </Container>
+    </Layout>
+  )
+}
+
+const Container = styled.div``
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
@@ -15,18 +25,8 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
 `
-
-export default ({ data: { mdx } }) => {
-  return (
-    <Layout>
-      <Container>
-        <h1>{mdx.frontmatter.title}</h1>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </Container>
-    </Layout>
-  )
-}

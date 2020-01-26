@@ -7,7 +7,7 @@ comments: false
 
 Hey hey! I'm proud to finally host a page for sharing what I learn, and generally keeping a record of my side projects and hobbies. A handy side effect is now I feel obligated to have some kind of regular cadence for updates, so perhaps I'll actually deliver at least a single independent application this year 😄
 
-## Alright!
+## Under the hood
 
 Here's a summary of the tech I chose, along with some lessons learned:
 
@@ -23,6 +23,15 @@ Here's a summary of the tech I chose, along with some lessons learned:
 - Cost-wise, I'm paying a few pennies a month, unless this blows the hell up and I get enough traffic to incur terabytes of traffic.
 
 Source for this page is on [Github](https://github.com/bazomatic/gatsby-blog-v1).
+
+## On the horizon
+
+Immediate things I want to implement:
+
+- Get traffic analytics/SEO tags onto the page
+- Set up a CI/CD pipeline, probably using Github actions to just dump the built site into the right S3 bucket on commit to master
+- Finish up the sidebar
+- Spruce up the styles in general; it's clean, at least
 
 ## Shoutouts 🎉
 
