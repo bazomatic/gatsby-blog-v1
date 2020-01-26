@@ -7,6 +7,7 @@ export default () => (
     <HeadingLink to="/">
       <Heading>Sam Abazly</Heading>
     </HeadingLink>
+    <CopyLine>Copyright © 2020 Bassam Abazly II</CopyLine>
   </Container>
 )
 
@@ -15,7 +16,7 @@ const Container = styled.div`
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 2rem 1rem;
-  @media (min-width: 48em) {
+  @media (min-width: 48rem) {
     width: 18rem;
     position: fixed;
     top: 0;
@@ -28,14 +29,6 @@ const Container = styled.div`
 const Heading = styled.h1`
   color: white;
   margin: 0;
-`
-
-const Lead = styled.p`
-  font-size: 1.25rem;
-  font-weight: 300;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `
 
 const Icon = styled.a`
@@ -51,9 +44,13 @@ const HeadingLink = styled(Link)`
   }
 `
 
-const CopyLine = styled.p`
+const CopyLine = styled.div`
   text-align: center;
-  @media (max-width: 768px) {
+  height: 1rem;
+  @media (max-width: 48rem) {
     margin-bottom: 0;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
   }
 `

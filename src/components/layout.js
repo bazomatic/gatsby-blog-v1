@@ -18,13 +18,10 @@ const Container = styled.div`
 const Wrapper = styled.div`
   padding-top: 2rem;
   padding-bottom: 4rem;
-  max-width: 38rem;
-  @media (min-width: 64em) {
-    margin-left: 22rem;
-    margin-right: 4rem;
-  }
-  @media (min-width: 48em) {
-    margin-left: 18rem;
-    max-width: 38rem;
+  max-width: 48rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  @media (min-width: 48rem) {
+    margin-left: 20rem;
   }
 `

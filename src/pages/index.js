@@ -4,7 +4,27 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
-const Container = styled.div``
+export default ({ data }) => {
+  const { edges: posts } = data.allMdx
+  return (
+    <Layout>
+      <Posts>
+        <ul>
+          {posts.map(({ node: post }) => (
+            <li key={post.id}>
+              <Link to={post.fields.slug}>
+                <h2>{post.frontmatter.title}</h2>
+              </Link>
+              <p>{post.excerpt}</p>
+            </li>
+          ))}
+        </ul>
+      </Posts>
+    </Layout>
+  )
+}
+
+const Posts = styled.div``
 
 export const postQuery = graphql`
   query postIndex {
@@ -24,22 +44,3 @@ export const postQuery = graphql`
     }
   }
 `
-export default ({ data }) => {
-  const { edges: posts } = data.allMdx
-  return (
-    <Layout>
-      <Container>
-        <ul>
-          {posts.map(({ node: post }) => (
-            <li key={post.id}>
-              <Link to={post.fields.slug}>
-                <h2>{post.frontmatter.title}</h2>
-              </Link>
-              <p>{post.excerpt}</p>
-            </li>
-          ))}
-        </ul>
-      </Container>
-    </Layout>
-  )
-}

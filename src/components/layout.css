@@ -1,13 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetical Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: "Helvetical Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
 
 html {
   box-sizing: border-box;
+}
+
+@media only screen and (min-width: 64rem) {
+  html {
+    font-size: 1.25rem;
+  }
 }
 
 *,
