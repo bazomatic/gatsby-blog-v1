@@ -9,22 +9,33 @@ export default ({ data }) => {
   return (
     <Layout>
       <Posts>
-        <ul>
-          {posts.map(({ node: post }) => (
-            <li key={post.id}>
-              <Link to={post.fields.slug}>
-                <h2>{post.frontmatter.title}</h2>
-              </Link>
-              <p>{post.excerpt}</p>
-            </li>
-          ))}
-        </ul>
+        {posts.map(({ node: post }) => (
+          <PostExcerpt key={post.id}>
+            <Link to={post.fields.slug}>
+              <Title>{post.frontmatter.title}</Title>
+            </Link>
+            <Date>{post.frontmatter.date}</Date>
+            <div>{post.excerpt}</div>
+          </PostExcerpt>
+        ))}
       </Posts>
     </Layout>
   )
 }
 
-const Posts = styled.div``
+const Posts = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const Title = styled.h2``
+const Date = styled.h4``
+
+const PostExcerpt = styled.div`
+  margin: 0.5rem;
+  padding-bottom: 1rem;
+  border-style: none none dashed none;
+`
 
 export const postQuery = graphql`
   query postIndex {
@@ -38,6 +49,7 @@ export const postQuery = graphql`
           excerpt
           frontmatter {
             title
+            date(formatString: "YYYY-MM-DD")
           }
           fields {
             slug
