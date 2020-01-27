@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const siteAddress = new URL("https://abazly.com")
-
 module.exports = {
   siteMetadata: {
     title: "Sam Abazly's Blog",
@@ -27,11 +25,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-s3`,
+      resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        bucketName: `abazly.com`,
-        protocol: siteAddress.protocol.slice(0, -1),
-        hostname: siteAddress.hostname,
+        siteUrl: `https://abazly.com`,
+        stripQueryString: true,
       },
     },
   ],
