@@ -3,7 +3,7 @@ layout: post
 title: Building the pipeline
 date: 2020-01-26
 comments: false
-published: false
+published: true
 ---
 
 ## WILL IT BLEND?! ⚡️
