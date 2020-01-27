@@ -2,14 +2,17 @@ version: 0.1
 phases:
   install:
     commands:
-      - "touch .npmignore"
-      - "npm install -g gatsby"
+      - touch .npmignore
+      - npm install -g gatsby
   pre_build:
     commands:
-      - "npm install"
+      - npm install
   build:
     commands:
-      - "npm run build"
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 rm --recursive "s3://abazly.com"
 artifacts:
   base-directory: public
   files:
