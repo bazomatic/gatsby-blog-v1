@@ -17,3 +17,11 @@ Or for the actual, literal details, check out [package.json](/package.json) 😁
 Overall, this is a [Gatsby starter project](https://www.gatsbyjs.org/tutorial/), which covers all the details including what you need to have installed (node and gatsby CLI).
 
 Otherwise, it's just `npm install` -> `npm run start` to get devvin' 💻🖱🍻
+
+## what're you doin next?
+
+My general todos/probably-will-maybe-dos are:
+
+- add in [react helmet](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet) and do some SEO stuff (and most importantly add a page title, a randomized-on-load one)
+- add tags to posts and a tag cloud
+- add some damn color, blog is too drab
