@@ -16,7 +16,9 @@ export default ({ data: { mdx } }) => {
   )
 }
 
-const Container = styled.div``
+const Container = styled.div`
+  margin: 0.5rem;
+`
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {

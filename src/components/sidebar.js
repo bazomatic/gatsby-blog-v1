@@ -24,7 +24,11 @@ export default () => (
         <FaGithub size="2rem" />
       </Icon>
     </ExternalSites>
-    <CopyLine>Copyright © 2020 Bassam Abazly II</CopyLine>
+    <CopyLine>
+      Copyright © 2020 Bassam Abazly II
+      <br />
+      All Rights Reserved
+    </CopyLine>
   </Container>
 )
 
@@ -41,6 +45,7 @@ const Container = styled.div`
     top: 0;
     left: 0;
     bottom: 0;
+    height: 100vh;
   }
 `
 
@@ -81,4 +86,5 @@ const HeadingLink = styled(Link)`
 
 const CopyLine = styled.div`
   height: 1rem;
+  margin: auto auto 0.25rem auto;
 `
