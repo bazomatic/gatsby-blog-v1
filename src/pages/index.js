@@ -11,11 +11,11 @@ export default ({ data }) => {
       <Posts>
         {posts.map(({ node: post }) => (
           <PostExcerpt key={post.id}>
-            <Link to={post.fields.slug}>
+            <PostLink to={post.fields.slug}>
               <Title>{post.frontmatter.title}</Title>
-            </Link>
-            <Date>{post.frontmatter.date}</Date>
-            <div>{post.excerpt}</div>
+              <Date>{post.frontmatter.date}</Date>
+              <div>{post.excerpt}</div>
+            </PostLink>
           </PostExcerpt>
         ))}
       </Posts>
@@ -28,13 +28,23 @@ const Posts = styled.div`
   flex-direction: column;
 `
 
-const Title = styled.h2``
+const Title = styled.h1``
 const Date = styled.h4``
 
 const PostExcerpt = styled.div`
   margin: 0.5rem;
   padding-bottom: 1rem;
   border-style: none none dashed none;
+`
+
+const PostLink = styled(Link)`
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: inherit;
+  }
 `
 
 export const postQuery = graphql`
