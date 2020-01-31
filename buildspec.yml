@@ -1,20 +1,36 @@
 version: 0.2
+
+env:
+  variables:
+    S3_BUCKET: abazly.com
+    DISTRO_ID: EQAU5I7M7MYKE
+
 phases:
   install:
     runtime-versions:
       nodejs: 10
     commands:
-      - touch .npmignore
+      - echo Installing source dependencies...
       - npm install -g gatsby
   pre_build:
     commands:
       - npm install
   build:
     commands:
+      - echo Build started on `date`
       - npm run build
   post_build:
     commands:
-      - aws s3 rm --recursive "s3://abazly.com"
+      - echo Clearing destination bucket $S3_BUCKET
+      - aws s3 rm s3://${S3_BUCKET} --recursive
+
+      - echo Copying build to destination bucket $S3_BUCKET
+      - aws s3 cp public/ s3://$S3_BUCKET --recursive
+
+      - echo Invalidating CloudFront distribution $DISTRO_ID
+      - aws cloudfront create-invalidation --distribution-id $DISTRO_ID --paths "/*"
+
+      - echo Build completed on `date`
 artifacts:
   base-directory: public
   files:
