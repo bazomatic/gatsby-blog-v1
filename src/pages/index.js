@@ -39,11 +39,9 @@ const PostExcerpt = styled.div`
 
 const PostLink = styled(Link)`
   text-decoration: none;
+  color: inherit;
   &:hover {
     text-decoration: underline;
-  }
-  &:visited {
-    color: inherit;
   }
 `
 
