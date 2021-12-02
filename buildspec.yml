@@ -9,9 +9,6 @@ phases:
   install:
     runtime-versions:
       nodejs: 14
-    # commands:
-    #   - echo Installing source dependencies...
-    #   - npm install -g gatsby-cli
   pre_build:
     commands:
       - npm install
@@ -19,6 +16,7 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build
+    on-failure: ABORT
   post_build:
     commands:
       - echo Clearing destination bucket $S3_BUCKET
