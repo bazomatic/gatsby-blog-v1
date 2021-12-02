@@ -8,10 +8,10 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 10
-    commands:
-      - echo Installing source dependencies...
-      - npm install -g gatsby
+      nodejs: 16
+    # commands:
+    #   - echo Installing source dependencies...
+    #   - npm install -g gatsby-cli
   pre_build:
     commands:
       - npm install
