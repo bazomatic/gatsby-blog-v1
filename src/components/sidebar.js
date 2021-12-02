@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa"
+import { FaLinkedin, FaTwitter, FaGithub, FaTimes } from "react-icons/fa"
 
 export default () => (
   <Container>
@@ -9,14 +9,14 @@ export default () => (
       <Headshot src="/headshot.jpg" />
       <Heading>Sam Abazly</Heading>
     </HeadingLink>
-    <Title>Software Engineer</Title>
-    <Title>Decent Human</Title>
+    <Title>Software "Engineer"</Title>
+    <Title>Real Good at Googling</Title>
     <Title>Total Nerd</Title>
     <Spacer />
     <ExternalSites>
-      <Icon href="https://www.linkedin.com/in/bassam-abazly-ii/">
+      {/* <Icon href="https://www.linkedin.com/in/bassam-abazly-ii/">
         <FaLinkedin size="2rem" />
-      </Icon>
+      </Icon> */}
       <Icon href="https://twitter.com/bassamabazlyii">
         <FaTwitter size="2rem" />
       </Icon>
@@ -25,7 +25,7 @@ export default () => (
       </Icon>
     </ExternalSites>
     <CopyLine>
-      Copyright © 2020 Bassam Abazly II
+      Copyright © {new Date().getFullYear()} Bassam Abazly II
       <br />
       All Rights Reserved
     </CopyLine>

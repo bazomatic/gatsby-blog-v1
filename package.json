@@ -17,7 +17,7 @@
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
     "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.18.12",
+    "gatsby": "^4.3.x",
     "gatsby-plugin-canonical-urls": "^2.1.19",
     "gatsby-plugin-mdx": "^1.0.67",
     "gatsby-plugin-styled-components": "^3.1.17",
